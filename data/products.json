@@ -1,0 +1,476 @@
+[
+  {
+    "id": "1",
+    "name": "Classic Cotton T-Shirt",
+    "images": [
+      {
+        "url": "/t-1.webp",
+        "alt": "Classic Cotton T-Shirt",
+        "isMain": true
+      }
+    ],
+    "realPrice": 29.99,
+    "discountedPrice": 24.99,
+    "description": "A comfortable and stylish cotton t-shirt perfect for everyday wear. Made from 100% organic cotton with a relaxed fit.",
+    "shortDescription": "Comfortable cotton t-shirt for everyday wear",
+    "sizes": [
+      {
+        "name": "S",
+        "stock": 10
+      },
+      {
+        "name": "M",
+        "stock": 15
+      },
+      {
+        "name": "L",
+        "stock": 12
+      },
+      {
+        "name": "XL",
+        "stock": 8
+      }
+    ],
+    "category": "T-Shirts",
+    "gender": "unisex",
+    "tags": ["cotton", "casual", "comfortable", "basic"],
+    "isAvailable": true,
+    "totalStock": 45,
+    "avgRating": 4.5,
+    "numReviews": 23,
+    "createdAt": "2024-01-15T10:30:00.000Z",
+    "updatedAt": "2024-01-15T10:30:00.000Z"
+  },
+  {
+    "id": "2",
+    "name": "Premium Denim Jeans",
+    "images": [
+      {
+        "url": "/t-2.webp",
+        "alt": "Premium Denim Jeans",
+        "isMain": true
+      }
+    ],
+    "realPrice": 89.99,
+    "discountedPrice": 69.99,
+    "description": "High-quality denim jeans with perfect fit and durability. Features a modern slim cut with stretch comfort.",
+    "shortDescription": "Premium denim jeans with perfect fit",
+    "sizes": [
+      {
+        "name": "S",
+        "stock": 5
+      },
+      {
+        "name": "M",
+        "stock": 8
+      },
+      {
+        "name": "L",
+        "stock": 10
+      },
+      {
+        "name": "XL",
+        "stock": 6
+      },
+      {
+        "name": "XXL",
+        "stock": 4
+      }
+    ],
+    "category": "Jeans",
+    "gender": "unisex",
+    "tags": ["denim", "premium", "slim-fit", "casual"],
+    "isAvailable": true,
+    "totalStock": 33,
+    "avgRating": 4.8,
+    "numReviews": 45,
+    "createdAt": "2024-01-10T14:20:00.000Z",
+    "updatedAt": "2024-01-10T14:20:00.000Z"
+  },
+  {
+    "id": "3",
+    "name": "Casual Hoodie",
+    "images": [
+      {
+        "url": "/t-3.webp",
+        "alt": "Casual Hoodie",
+        "isMain": true
+      }
+    ],
+    "realPrice": 59.99,
+    "discountedPrice": 49.99,
+    "description": "Warm and cozy hoodie perfect for cool weather. Features a soft fleece lining and adjustable drawstring hood.",
+    "shortDescription": "Warm and cozy hoodie for cool weather",
+    "sizes": [
+      {
+        "name": "S",
+        "stock": 7
+      },
+      {
+        "name": "M",
+        "stock": 12
+      },
+      {
+        "name": "L",
+        "stock": 9
+      },
+      {
+        "name": "XL",
+        "stock": 6
+      }
+    ],
+    "category": "Hoodies",
+    "gender": "unisex",
+    "tags": ["hoodie", "warm", "casual", "comfortable"],
+    "isAvailable": true,
+    "totalStock": 34,
+    "avgRating": 4.3,
+    "numReviews": 18,
+    "createdAt": "2024-01-12T09:15:00.000Z",
+    "updatedAt": "2024-01-12T09:15:00.000Z"
+  },
+  {
+    "id": "4",
+    "name": "Formal Dress Shirt",
+    "images": [
+      {
+        "url": "/t-4.webp",
+        "alt": "Formal Dress Shirt",
+        "isMain": true
+      }
+    ],
+    "realPrice": 79.99,
+    "discountedPrice": 64.99,
+    "description": "Elegant formal dress shirt suitable for business meetings and special occasions. Made from wrinkle-resistant fabric.",
+    "shortDescription": "Elegant formal dress shirt for business",
+    "sizes": [
+      {
+        "name": "S",
+        "stock": 4
+      },
+      {
+        "name": "M",
+        "stock": 8
+      },
+      {
+        "name": "L",
+        "stock": 10
+      },
+      {
+        "name": "XL",
+        "stock": 6
+      },
+      {
+        "name": "XXL",
+        "stock": 3
+      }
+    ],
+    "category": "Formal Wear",
+    "gender": "unisex",
+    "tags": ["formal", "business", "elegant", "professional"],
+    "isAvailable": true,
+    "totalStock": 31,
+    "avgRating": 4.6,
+    "numReviews": 32,
+    "createdAt": "2024-01-08T16:45:00.000Z",
+    "updatedAt": "2024-01-08T16:45:00.000Z"
+  },
+  {
+    "id": "5",
+    "name": "Graphic Print T-Shirt",
+    "images": [
+      {
+        "url": "/t-5.webp",
+        "alt": "Graphic Print T-Shirt",
+        "isMain": true
+      }
+    ],
+    "realPrice": 34.99,
+    "discountedPrice": 27.99,
+    "description": "Stylish graphic t-shirt with unique artwork. Perfect for expressing your personality.",
+    "shortDescription": "Stylish graphic t-shirt with unique artwork",
+    "sizes": [
+      {
+        "name": "S",
+        "stock": 8
+      },
+      {
+        "name": "M",
+        "stock": 12
+      },
+      {
+        "name": "L",
+        "stock": 10
+      },
+      {
+        "name": "XL",
+        "stock": 6
+      }
+    ],
+    "category": "Graphic Tees",
+    "gender": "unisex",
+    "tags": ["graphic", "artistic", "casual", "trending"],
+    "isAvailable": true,
+    "totalStock": 36,
+    "avgRating": 4.7,
+    "numReviews": 28,
+    "isTrending": true,
+    "createdAt": "2024-01-20T11:30:00.000Z",
+    "updatedAt": "2024-01-20T11:30:00.000Z"
+  },
+  {
+    "id": "6",
+    "name": "Minimalist White Tee",
+    "images": [
+      {
+        "url": "/t-6.webp",
+        "alt": "Minimalist White Tee",
+        "isMain": true
+      }
+    ],
+    "realPrice": 24.99,
+    "discountedPrice": 19.99,
+    "description": "Clean and simple white t-shirt with minimalist design. Perfect for everyday wear.",
+    "shortDescription": "Clean and simple white t-shirt",
+    "sizes": [
+      {
+        "name": "S",
+        "stock": 15
+      },
+      {
+        "name": "M",
+        "stock": 20
+      },
+      {
+        "name": "L",
+        "stock": 18
+      },
+      {
+        "name": "XL",
+        "stock": 12
+      }
+    ],
+    "category": "Minimalist",
+    "gender": "unisex",
+    "tags": ["minimalist", "simple", "clean", "basic"],
+    "isAvailable": true,
+    "totalStock": 65,
+    "avgRating": 4.4,
+    "numReviews": 42,
+    "createdAt": "2024-01-18T13:20:00.000Z",
+    "updatedAt": "2024-01-18T13:20:00.000Z"
+  },
+  {
+    "id": "7",
+    "name": "Vintage Denim Jacket",
+    "images": [
+      {
+        "url": "/t-7.jpg",
+        "alt": "Vintage Denim Jacket",
+        "isMain": true
+      }
+    ],
+    "realPrice": 129.99,
+    "discountedPrice": 89.99,
+    "description": "Classic vintage-style denim jacket with distressed finish. Timeless fashion piece.",
+    "shortDescription": "Classic vintage-style denim jacket",
+    "sizes": [
+      {
+        "name": "S",
+        "stock": 6
+      },
+      {
+        "name": "M",
+        "stock": 8
+      },
+      {
+        "name": "L",
+        "stock": 7
+      },
+      {
+        "name": "XL",
+        "stock": 5
+      }
+    ],
+    "category": "Vintage",
+    "gender": "unisex",
+    "tags": ["vintage", "denim", "classic", "distressed"],
+    "isAvailable": true,
+    "totalStock": 26,
+    "avgRating": 4.9,
+    "numReviews": 35,
+    "createdAt": "2024-01-05T10:15:00.000Z",
+    "updatedAt": "2024-01-05T10:15:00.000Z"
+  },
+  {
+    "id": "8",
+    "name": "Limited Edition Artist Tee",
+    "images": [
+      {
+        "url": "/t-8.webp",
+        "alt": "Limited Edition Artist Tee",
+        "isMain": true
+      }
+    ],
+    "realPrice": 49.99,
+    "discountedPrice": 39.99,
+    "description": "Exclusive limited edition t-shirt featuring original artwork. Only 100 pieces available worldwide.",
+    "shortDescription": "Exclusive limited edition artist t-shirt",
+    "sizes": [
+      {
+        "name": "S",
+        "stock": 3
+      },
+      {
+        "name": "M",
+        "stock": 5
+      },
+      {
+        "name": "L",
+        "stock": 4
+      },
+      {
+        "name": "XL",
+        "stock": 3
+      }
+    ],
+    "category": "Limited Edition",
+    "gender": "unisex",
+    "tags": ["limited", "exclusive", "artist", "collector"],
+    "isAvailable": true,
+    "totalStock": 15,
+    "avgRating": 4.8,
+    "numReviews": 12,
+    "isLimitedEdition": true,
+    "createdAt": "2024-01-25T09:45:00.000Z",
+    "updatedAt": "2024-01-25T09:45:00.000Z"
+  },
+  {
+    "id": "9",
+    "name": "Men's Premium Polo",
+    "images": [
+      {
+        "url": "/t-9.webp",
+        "alt": "Men's Premium Polo",
+        "isMain": true
+      }
+    ],
+    "realPrice": 69.99,
+    "discountedPrice": 54.99,
+    "description": "Premium polo shirt for men with superior comfort and style. Perfect for casual and semi-formal occasions.",
+    "shortDescription": "Premium polo shirt for men",
+    "sizes": [
+      {
+        "name": "S",
+        "stock": 7
+      },
+      {
+        "name": "M",
+        "stock": 12
+      },
+      {
+        "name": "L",
+        "stock": 10
+      },
+      {
+        "name": "XL",
+        "stock": 8
+      }
+    ],
+    "category": "Men's Wear",
+    "gender": "men",
+    "tags": ["men", "polo", "premium", "casual"],
+    "isAvailable": true,
+    "totalStock": 37,
+    "avgRating": 4.6,
+    "numReviews": 29,
+    "createdAt": "2024-01-15T14:30:00.000Z",
+    "updatedAt": "2024-01-15T14:30:00.000Z"
+  },
+  {
+    "id": "10",
+    "name": "Women's Elegant Blouse",
+    "images": [
+      {
+        "url": "/t-10.webp",
+        "alt": "Women's Elegant Blouse",
+        "isMain": true
+      }
+    ],
+    "realPrice": 89.99,
+    "discountedPrice": 59.99,
+    "description": "Elegant blouse for women with sophisticated design. Perfect for office and evening wear.",
+    "shortDescription": "Elegant blouse for women",
+    "sizes": [
+      {
+        "name": "S",
+        "stock": 6
+      },
+      {
+        "name": "M",
+        "stock": 10
+      },
+      {
+        "name": "L",
+        "stock": 8
+      },
+      {
+        "name": "XL",
+        "stock": 5
+      }
+    ],
+    "category": "Women's Wear",
+    "gender": "women",
+    "tags": ["women", "elegant", "blouse", "formal"],
+    "isAvailable": true,
+    "totalStock": 29,
+    "avgRating": 4.7,
+    "numReviews": 31,
+    "createdAt": "2024-01-12T11:20:00.000Z",
+    "updatedAt": "2024-01-12T11:20:00.000Z"
+  },
+  {
+    "id": "11",
+    "name": "Bundle Deal: 3-Pack Tees",
+    "images": [
+      {
+        "url": "/t-10.webp",
+        "alt": "Bundle Deal: 3-Pack Tees",
+        "isMain": true
+      }
+    ],
+    "realPrice": 89.97,
+    "discountedPrice": 59.99,
+    "description": "Amazing bundle deal! Get 3 premium t-shirts for the price of 2. Mix and match colors.",
+    "shortDescription": "Bundle deal: 3 premium t-shirts",
+    "sizes": [
+      {
+        "name": "S",
+        "stock": 8
+      },
+      {
+        "name": "M",
+        "stock": 12
+      },
+      {
+        "name": "L",
+        "stock": 10
+      },
+      {
+        "name": "XL",
+        "stock": 6
+      }
+    ],
+    "category": "Bundle Deals",
+    "gender": "unisex",
+    "tags": ["bundle", "deal", "offer", "savings"],
+    "isAvailable": true,
+    "totalStock": 36,
+    "avgRating": 4.5,
+    "numReviews": 18,
+    "isBundleDeal": true,
+    "hasSpecialOffer": true,
+    "createdAt": "2024-01-22T16:15:00.000Z",
+    "updatedAt": "2024-01-22T16:15:00.000Z"
+  }
+]

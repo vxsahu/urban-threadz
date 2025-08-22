@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff; /* white */
+  --foreground: #000000; /* black */
+  --card: #ffffff;       /* white */
+  --card-foreground: #000000; /* black */
+  --border: #e5e7eb;     /* light gray for borders in light mode */
+  --primary: #000000; /* Ensuring primary elements follow foreground */
+  --primary-foreground: #ffffff;
+  --secondary: #333333; /* Darker gray for secondary text in light mode */
+  --secondary-foreground: #ffffff;
+  --neutral: #f0f0f0; /* Light gray for neutral backgrounds in light mode */
+  --neutral-foreground: #000000;
+  --accent: #5C7A4A;
+  --accent-foreground: #ffffff;
+  --muted: #f0f0f0;
+  --muted-foreground: #000000;
+}
+
+[data-theme="dark"] {
+  --background: #000000; /* black */
+  --foreground: #ffffff; /* white */
+  --card: #1a1a1a;       /* very dark gray for cards in dark mode */
+  --card-foreground: #ffffff; /* white */
+  --border: #333333;     /* dark gray for borders in dark mode */
+  --primary: #ffffff; /* Ensuring primary elements follow foreground */
+  --primary-foreground: #000000;
+  --secondary: #cccccc; /* Lighter gray for secondary text in dark mode */
+  --secondary-foreground: #000000;
+  --neutral: #111111; /* Very dark gray for neutral backgrounds in dark mode */
+  --neutral-foreground: #ffffff;
+  --accent: #5C7A4A;
+  --accent-foreground: #ffffff;
+  --muted: #1a1a1a;
+  --muted-foreground: #ffffff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
