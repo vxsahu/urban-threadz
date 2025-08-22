@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/', '/private/'],
     },
-    sitemap: 'https://urbanthread.com/sitemap.xml',
+    sitemap: `${require('@/utils/config').siteUrl}/sitemap.xml`,
   };
 }

@@ -130,7 +130,7 @@ const Logo = () => (
       </svg>
     </motion.div>
     <span className="text-xl font-bold bg-gradient-to-r from-[var(--foreground)] to-[var(--primary)] bg-clip-text text-transparent">
-      UrbanThread
+      NextThreadz
     </span>
   </Link>
 );

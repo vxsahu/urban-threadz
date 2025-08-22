@@ -12,8 +12,8 @@ export default async function ProductsPage() {
   const products = await getAllProducts();
 
   const breadcrumbPaths = [
-    { name: 'Home', url: 'https://urbanthread.com' },
-    { name: 'All Products', url: 'https://urbanthread.com/products' }
+    { name: 'Home', url: `${require('@/utils/config').siteUrl}` },
+    { name: 'All Products', url: `${require('@/utils/config').siteUrl}/products` }
   ];
 
   return (

@@ -6,20 +6,20 @@ export function generateOrganizationSchema(): WithContext<Organization> {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'UrbanThread',
-    url: 'https://urbanthread.com',
-    logo: 'https://urbanthread.com/logo.png',
+    name: 'NextThread',
+    url: `${require('@/utils/config').siteUrl}`,
+    logo: `${require('@/utils/config').siteUrl}/logo.png`,
     description: 'Premium clothing and fashion retailer offering trendy apparel for men, women, and unisex.',
     sameAs: [
-      'https://www.instagram.com/urban__threadz__/',
-      'https://twitter.com/urbanthread',
-      'https://facebook.com/urbanthread'
+      `${require('@/utils/config').siteUrl}/redirect/instagram`,
+      `${require('@/utils/config').siteUrl}/redirect/twitter`,
+      `${require('@/utils/config').siteUrl}/redirect/facebook`
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-555-123-4567',
+      telephone: '+918502913816',
       contactType: 'customer service',
-      email: 'support@urbanthread.com'
+      email: 'urbanthreadz240@gmail.com'
     },
     address: {
       '@type': 'PostalAddress',
@@ -37,16 +37,16 @@ export function generateWebsiteSchema(): WithContext<WebSite> {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'UrbanThread',
-    url: 'https://urbanthread.com',
+    name: 'NextThread',
+    url: `${require('@/utils/config').siteUrl}`,
     description: 'Premium clothing and fashion retailer',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://urbanthread.com/search?q={search_term_string}'
+        urlTemplate: `${require('@/utils/config').siteUrl}/search?q={search_term_string}`
       },
-      'query-input': 'required name=search_term_string'
+      // 'query-input': 'required name=search_term_string'
     }
   };
 }
@@ -54,7 +54,7 @@ export function generateWebsiteSchema(): WithContext<WebSite> {
 // Product structured data
 export function generateProductSchema(product: Product): WithContext<ProductSchema> {
   const productImage = product.images.find(img => img.isMain)?.url || product.images[0]?.url;
-  const fullImageUrl = `https://urbanthread.com${productImage}`;
+  const fullImageUrl = `${require('@/utils/config').siteUrl}${productImage}`;
   
   const offers = {
     '@type': 'Offer',
@@ -63,18 +63,18 @@ export function generateProductSchema(product: Product): WithContext<ProductSche
     availability: product.isAvailable && product.totalStock > 0 
       ? 'https://schema.org/InStock' 
       : 'https://schema.org/OutOfStock',
-    url: `https://urbanthread.com/productDetails/${product.id}`,
+    url: `${require('@/utils/config').siteUrl}/productDetails/${product.id}`,
     seller: {
       '@type': 'Organization',
-      name: 'UrbanThread'
+      name: 'NextThread'
     },
     priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 days from now
   };
 
   if (product.discountedPrice && product.discountedPrice < product.realPrice) {
     offers.price = product.discountedPrice;
-    offers.highPrice = product.realPrice;
-    offers.lowPrice = product.discountedPrice;
+    // offers.highPrice = product.realPrice;
+    // offers.lowPrice = product.discountedPrice;
   }
 
   return {
@@ -86,10 +86,10 @@ export function generateProductSchema(product: Product): WithContext<ProductSche
     sku: product.id,
     brand: {
       '@type': 'Brand',
-      name: 'UrbanThread'
+      name: 'NextThread'
     },
     category: product.category,
-    offers,
+    // offers,
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: product.avgRating,
@@ -135,8 +135,8 @@ export function generateItemListSchema(products: Product[], category: string, su
       item: {
         '@type': 'Product',
         name: product.name,
-        url: `https://urbanthread.com/productDetails/${product.id}`,
-        image: `https://urbanthread.com${product.images.find(img => img.isMain)?.url || product.images[0]?.url}`,
+        url: `${require('@/utils/config').siteUrl}/productDetails/${product.id}`,
+        image: `${require('@/utils/config').siteUrl}${product.images.find(img => img.isMain)?.url || product.images[0]?.url}`,
         description: product.shortDescription || product.description,
         offers: {
           '@type': 'Offer',
@@ -159,10 +159,10 @@ export function generateFAQSchema(): WithContext<any> {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What is UrbanThread?',
+        name: 'What is NextThread?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'UrbanThread is a premium clothing and fashion retailer offering trendy apparel for men, women, and unisex. We provide high-quality clothing with the latest fashion trends.'
+          text: 'NextThread is a premium clothing and fashion retailer offering trendy apparel for men, women, and unisex. We provide high-quality clothing with the latest fashion trends.'
         }
       },
       {
@@ -206,11 +206,11 @@ export function generateLocalBusinessSchema(): WithContext<any> {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'UrbanThread',
+    name: 'NextThread',
     description: 'Premium clothing and fashion retailer',
-    url: 'https://urbanthread.com',
-    telephone: '+1-555-123-4567',
-    email: 'support@urbanthread.com',
+    url: `${require('@/utils/config').siteUrl}`,
+    telephone: '+91 8502913816',
+    email: 'urbanthreadz240@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '123 Fashion Street',

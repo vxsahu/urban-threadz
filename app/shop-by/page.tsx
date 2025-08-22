@@ -49,9 +49,9 @@ export default function ShopByPage({ searchParams }: ShopByProps) {
   }
 
   const breadcrumbPaths = [
-    { name: 'Home', url: 'https://urbanthread.com' },
-    { name: 'Shop By Category', url: 'https://urbanthread.com/shop-by' },
-    ...(subcategory ? [{ name: subcategory.replace('-', ' '), url: `https://urbanthread.com/shop-by?subcategory=${subcategory}` }] : [])
+    { name: 'Home', url: `${require('@/utils/config').siteUrl}` },
+    { name: 'Shop By Category', url: `${require('@/utils/config').siteUrl}/shop-by` },
+    ...(subcategory ? [{ name: subcategory.replace('-', ' '), url: `${require('@/utils/config').siteUrl}/shop-by?subcategory=${subcategory}` }] : [])
   ];
 
   return (

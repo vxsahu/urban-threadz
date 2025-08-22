@@ -53,9 +53,9 @@ export default function SalePage({ searchParams }: SaleProps) {
   }
 
   const breadcrumbPaths = [
-    { name: 'Home', url: 'https://urbanthread.com' },
-    { name: 'Sale', url: 'https://urbanthread.com/sale' },
-    ...(subcategory ? [{ name: subcategory.replace('-', ' '), url: `https://urbanthread.com/sale?subcategory=${subcategory}` }] : [])
+    { name: 'Home', url: `${require('@/utils/config').siteUrl}` },
+    { name: 'Sale', url: `${require('@/utils/config').siteUrl}/sale` },
+    ...(subcategory ? [{ name: subcategory.replace('-', ' '), url: `${require('@/utils/config').siteUrl}/sale?subcategory=${subcategory}` }] : [])
   ];
 
   return (

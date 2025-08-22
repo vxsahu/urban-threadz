@@ -55,9 +55,9 @@ export default function CollectionsPage({ searchParams }: CollectionsProps) {
   }
 
   const breadcrumbPaths = [
-    { name: 'Home', url: 'https://urbanthread.com' },
-    { name: 'Collections', url: 'https://urbanthread.com/collections' },
-    ...(subcategory ? [{ name: subcategory.replace('-', ' '), url: `https://urbanthread.com/collections?subcategory=${subcategory}` }] : [])
+    { name: 'Home', url: `${require('@/utils/config').siteUrl}` },
+    { name: 'Collections', url: `${require('@/utils/config').siteUrl}/collections` },
+    ...(subcategory ? [{ name: subcategory.replace('-', ' '), url: `${require('@/utils/config').siteUrl}/collections?subcategory=${subcategory}` }] : [])
   ];
 
   return (

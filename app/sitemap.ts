@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllProducts } from '@/utils/productService';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://urbanthread.com';
+  const baseUrl = `${require('@/utils/config').siteUrl}`;
   const products = getAllProducts();
 
   // Static pages

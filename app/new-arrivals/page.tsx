@@ -49,9 +49,9 @@ export default function NewArrivalsPage({ searchParams }: NewArrivalsProps) {
   }
 
   const breadcrumbPaths = [
-    { name: 'Home', url: 'https://urbanthread.com' },
-    { name: 'New Arrivals', url: 'https://urbanthread.com/new-arrivals' },
-    ...(subcategory ? [{ name: subcategory.replace('-', ' '), url: `https://urbanthread.com/new-arrivals?subcategory=${subcategory}` }] : [])
+    { name: 'Home', url: `${require('@/utils/config').siteUrl}` },
+    { name: 'New Arrivals', url: `${require('@/utils/config').siteUrl}/new-arrivals` },
+    ...(subcategory ? [{ name: subcategory.replace('-', ' '), url: `${require('@/utils/config').siteUrl}/new-arrivals?subcategory=${subcategory}` }] : [])
   ];
 
   return (

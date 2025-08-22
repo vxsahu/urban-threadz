@@ -39,9 +39,9 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
   }
 
   const breadcrumbPaths = [
-    { name: 'Home', url: 'https://urbanthread.com' },
-    { name: 'Products', url: 'https://urbanthread.com/products' },
-    { name: product.name, url: `https://urbanthread.com/productDetails/${product.id}` }
+    { name: 'Home', url: `${require('@/utils/config').siteUrl}` },
+    { name: 'Products', url: `${require('@/utils/config').siteUrl}/products` },
+    { name: product.name, url: `${require('@/utils/config').siteUrl}/productDetails/${product.id}` }
   ];
 
   return (

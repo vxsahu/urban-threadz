@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect, useCallback, memo } from "react";
+import React, { useState, useRef, useCallback, memo } from "react";
 import { InstagramIcon, MessageCircleHeart, Truck } from "lucide-react";
 
 // Memoize icons to avoid unnecessary re-renders
@@ -21,7 +21,7 @@ const steps = [
     title: "Choose Your Style",
     desc: "Browse and pick your favorite designs on our instagram page @urban__threadz__",
     action: "Visit Instagram",
-    actionHref: "https://www.instagram.com/urban__threadz__/",
+    actionHref: `${require('@/utils/config').siteUrl}/redirect/instagram`,
     actionTarget: "_blank",
     actionRel: "noopener noreferrer",
   },
@@ -45,33 +45,14 @@ const steps = [
 
 export default function HowItWorks() {
   const [activeStep, setActiveStep] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  // Remove intervalRef and useEffect for auto-advance
+  // Remove useEffect for scroll-into-view
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // UseCallback for stable handler
   const goToStep = useCallback((idx: number) => {
     setActiveStep(idx);
   }, []);
-
-  // Only auto-advance if the user hasn't interacted recently
-  useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 3500);
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, []);
-
-  // Accessibility: focus management for step change
-  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
-  useEffect(() => {
-    if (stepRefs.current[activeStep]) {
-      // Only scroll into view on mobile for better UX
-      if (window.innerWidth < 768) {
-        stepRefs.current[activeStep]?.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-    }
-  }, [activeStep]);
 
   return (
     <section

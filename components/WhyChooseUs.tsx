@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
                     <span className="text-[var(--background)] text-4xl font-bold">UT</span>
                   </div>
                   <h3 className="text-2xl font-bold text-[var(--foreground)] mb-2">
-                    UrbanThread
+                    NextThreadz
                   </h3>
                   <p className="text-[var(--secondary)]">
                     Premium Clothing & Fashion
@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl font-bold text-[var(--foreground)] mb-4">
-                Why Choose UrbanThread?
+                Why Choose NextThreadz?
               </h2>
               <p className="text-lg text-[var(--secondary)] leading-relaxed">
                 We're not just another clothing brand. We're a community of fashion enthusiasts 

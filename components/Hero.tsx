@@ -59,7 +59,7 @@ export default function Hero() {
             {/* Product Description */}
             <div className="text-center lg:text-left">
               <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
-                Introducing The Urban Thread Collection — available for preorder February 8–22. Orders ship March 1st.
+                Introducing The Next Threadz Collection — available for preorder February 8–22. Orders ship March 1st.
               </p>
             </div>
 

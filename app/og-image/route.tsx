@@ -60,7 +60,7 @@ export async function GET() {
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              UrbanThread
+              NextThread
             </h1>
             <p
               style={{
@@ -183,8 +183,7 @@ export async function GET() {
             marginTop: '60px',
           }}
         >
-          urbanthread.com
-        </p>
+          {require('@/utils/config').siteUrl}        </p>
       </div>
     ),
     {

@@ -16,7 +16,7 @@ export default function FAQ() {
   const [showChat, setShowChat] = useState(false);
   const chatInputRef = useRef<HTMLInputElement>(null);
   const [chatMessages, setChatMessages] = useState<{ from: "user" | "bot"; text: string }[]>([
-    { from: "bot", text: "Hi! 👋 Need more help? Ask me anything about UrbanThread." }
+    { from: "bot", text: "Hi! 👋 Need more help? Ask me anything about Next Threadz." }
   ]);
   const [chatValue, setChatValue] = useState("");
 
@@ -161,7 +161,7 @@ export default function FAQ() {
                   <Smile className="w-6 h-6 text-[var(--accent)]" />
                 </span>
                 <div>
-                  <span className="block font-semibold text-gray-900 dark:text-white text-base">UrbanThread Support</span>
+                  <span className="block font-semibold text-gray-900 dark:text-white text-base">Next Threadz Support</span>
                   <span className="block text-xs text-gray-500 dark:text-gray-400">Typically replies in a few minutes</span>
                 </div>
               </div>

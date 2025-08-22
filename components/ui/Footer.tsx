@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="flex flex-col justify-center items-center gap-2 flex-1">
             <div className="flex items-center gap-2">
               <Image src="/logo.png" alt="Logo" width={32} height={32} className="rounded" />
-              <span className="text-lg font-bold text-[var(--foreground)] tracking-tight">UrbanThread</span>
+              <span className="text-lg font-bold text-[var(--foreground)] tracking-tight">NextThreadz</span>
             </div>
             <p className="text-[var(--secondary)] text-xs text-center max-w-xs">
               Latest streetwear & casual fashion. Quality, comfort, style—delivered.
@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center text-[var(--secondary)] text-xs py-3 border-t border-[var(--border)]">
-        &copy; {new Date().getFullYear()} UrbanThread.
+          &copy; {new Date().getFullYear()} NextThreadz.
       </div>
     </footer>
   );
