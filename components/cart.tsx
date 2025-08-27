@@ -1,10 +1,10 @@
 "use client";
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useState } from 'react'
-import { X, ShoppingCart, Trash2, Minus, Plus } from 'lucide-react'
+import { X, ShoppingCart, Trash2, Minus, Plus, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import { toast } from 'sonner'
-import { getCart, updateCartItemQuantity, removeFromCart as removeFromCartService, CartItem } from '@/utils/cartService'
+import { getCart, updateCartItemQuantity, removeFromCart as removeFromCartService, CartItem, generateCartWhatsAppMessage, openWhatsAppChat } from '@/utils/cartService'
 
 interface CartProps {
   isOpen: boolean;
@@ -27,8 +27,17 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
       loadCart();
     };
 
+    // Listen for custom cart update events
+    const handleCartUpdate = (event: CustomEvent) => {
+      setCartItems(event.detail);
+    };
+
     window.addEventListener('storage', handleStorageChange);
-    return () => window.removeEventListener('storage', handleStorageChange);
+    window.addEventListener('cartUpdated', handleCartUpdate as EventListener);
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('cartUpdated', handleCartUpdate as EventListener);
+    };
   }, []);
 
   const handleQuantityChange = (productId: string, delta: number) => {
@@ -65,6 +74,18 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
   const handleCheckout = () => {
     // For a static site, we can redirect to a checkout page or show a message
     toast.info('Checkout functionality would be implemented here');
+    onClose();
+  };
+
+  const handleWhatsAppCheckout = () => {
+    if (cartItems.length === 0) {
+      toast.error('Your cart is empty');
+      return;
+    }
+    
+    const message = generateCartWhatsAppMessage();
+    openWhatsAppChat(message);
+    toast.success('Opening WhatsApp chat for order!');
     onClose();
   };
 
@@ -117,7 +138,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                           ) : (
                             <ul role="list" className="-my-6 divide-y divide-[var(--border)]">
                               {cartItems.map((item) => (
-                                <li key={item.id} className="flex py-6">
+                                <li key={`${item.id}-${item.size}`} className="flex py-6">
                                   <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-[var(--border)]">
                                     <Image
                                       src={item.images[0].url}
@@ -133,6 +154,9 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                                         <h3>{item.name}</h3>
                                         <p className="ml-4">₹{item.discountedPrice || item.price}</p>
                                       </div>
+                                      {item.size && (
+                                        <p className="text-sm text-[var(--secondary)] mt-1">Size: {item.size}</p>
+                                      )}
                                     </div>
                                     <div className="flex flex-1 items-end justify-between text-sm">
                                       <div className="flex items-center space-x-3">
@@ -177,13 +201,21 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                           <p>₹{calculateSubtotal().toLocaleString('en-IN')}</p>
                         </div>
                         <p className="mt-0.5 text-sm text-[var(--secondary)]">Shipping and taxes calculated at checkout.</p>
-                        <div className="mt-6">
+                        <div className="mt-6 space-y-3">
                           <button
                             type="button"
                             onClick={handleCheckout}
                             className="w-full flex items-center justify-center rounded-md border border-transparent bg-[var(--primary)] px-6 py-3 text-base font-medium text-[var(--primary-foreground)] shadow-sm hover:opacity-90"
                           >
                             Checkout
+                          </button>
+                          <button
+                            type="button"
+                            onClick={handleWhatsAppCheckout}
+                            className="w-full flex items-center justify-center gap-2 rounded-md border border-transparent bg-green-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-green-700"
+                          >
+                            <MessageCircle className="w-5 h-5" />
+                            Order via WhatsApp
                           </button>
                         </div>
                         <div className="mt-6 flex justify-center text-center text-sm text-[var(--secondary)]">

@@ -1,9 +1,9 @@
 "use client";
 import { useState } from 'react';
 import Image from 'next/image';
-import { Heart, ShoppingCart, Star, Truck, Shield, RotateCcw } from 'lucide-react';
+import { Heart, ShoppingCart, Star, Truck, Shield, RotateCcw, MessageCircle } from 'lucide-react';
 import { toast } from 'sonner';
-import { addToCart, isItemInCart } from '@/utils/cartService';
+import { addToCart, isItemInCart, generateWhatsAppMessage, openWhatsAppChat } from '@/utils/cartService';
 import { Product } from '@/utils/productService';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/ui/Footer';
@@ -40,15 +40,21 @@ export default function ProductDetailsClient({ product }: ProductDetailsClientPr
     toast.success(isWishlisted ? "Removed from wishlist" : "Added to wishlist");
   };
 
-  const handleAddToCart = () => {
+  const handleAddToCartAndOrder = () => {
     if (!selectedSize && product.sizes.length > 0) {
       toast.error("Please select a size");
       return;
     }
     
+    // Add to cart first
     addToCart(product, quantity, selectedSize);
     setIsInCart(true);
     toast.success("Item added to cart!");
+    
+    // Then open WhatsApp for ordering
+    const message = generateWhatsAppMessage(product, quantity, selectedSize);
+    openWhatsAppChat(message);
+    toast.success("Opening WhatsApp for quick order!");
   };
 
   const handleSizeSelect = (size: string) => {
@@ -74,7 +80,7 @@ export default function ProductDetailsClient({ product }: ProductDetailsClientPr
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Product Image */}
           <div className="relative">
-            <div className="aspect-square relative overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--neutral)]">
+            <div className="aspect-square relative overflow-hidden rounded-2xl shadow border border-[var(--border)] bg-[var(--neutral)]">
               <Image
                 src={mainImage?.url || "/placeholder.svg"}
                 alt={mainImage?.alt || product.name}
@@ -138,14 +144,14 @@ export default function ProductDetailsClient({ product }: ProductDetailsClientPr
               <div>
                 <h3 className="text-lg font-semibold text-[var(--foreground)] mb-3">Select Size</h3>
                 <div className="flex flex-wrap gap-2">
-                  {product.sizes.map((size) => (
+                  {product.sizes.map((size, idx) => (
                     <button
                       key={size.name}
                       onClick={() => handleSizeSelect(size.name)}
-                      className={`px-4 py-2 border rounded-lg transition-colors ${
+                      className={`p-2 size-10 border rounded-full transition-colors ${
                         selectedSize === size.name
-                          ? 'border-[var(--foreground)] bg-[var(--foreground)] text-[var(--background)]'
-                          : 'border-[var(--border)] text-[var(--foreground)] hover:border-[var(--foreground)]'
+                          ? 'border-foreground bg-foreground text-background'
+                          : 'border-[var(--border)] text-foreground hover:border-border/20'
                       } ${size.stock === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
                       disabled={size.stock === 0}
                     >
@@ -156,14 +162,26 @@ export default function ProductDetailsClient({ product }: ProductDetailsClientPr
               </div>
             )}
 
+            {/* Set default size on mount if not already set */}
+            {product.sizes.length > 0 && typeof window !== 'undefined' && !selectedSize && (() => {
+              // Find first in-stock size
+              const firstAvailable = product.sizes.find(s => s.stock > 0);
+              if (firstAvailable) {
+                // setSelectedSize may be a state setter, so call it in a useEffect in the main component
+                // But for this inline, we can call handleSizeSelect
+                setTimeout(() => handleSizeSelect(firstAvailable.name), 0);
+              }
+              return null;
+            })()}
+
             {/* Quantity */}
             <div>
               <h3 className="text-lg font-semibold text-[var(--foreground)] mb-3">Quantity</h3>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 <button
                   onClick={() => handleQuantityChange(-1)}
                   disabled={quantity <= 1}
-                  className="p-2 border border-[var(--border)] rounded-lg disabled:opacity-50"
+                  className="size-10 text-xl border bg-zinc-50/10 border-[var(--border)] rounded-lg disabled:opacity-50"
                 >
                   -
                 </button>
@@ -171,7 +189,7 @@ export default function ProductDetailsClient({ product }: ProductDetailsClientPr
                 <button
                   onClick={() => handleQuantityChange(1)}
                   disabled={quantity >= 10}
-                  className="p-2 border border-[var(--border)] rounded-lg disabled:opacity-50"
+                  className="size-10 text-xl border bg-zinc-50/10 border-[var(--border)] rounded-lg disabled:opacity-50"
                 >
                   +
                 </button>
@@ -181,16 +199,12 @@ export default function ProductDetailsClient({ product }: ProductDetailsClientPr
             {/* Actions */}
             <div className="flex gap-4">
               <button
-                onClick={handleAddToCart}
+                onClick={handleAddToCartAndOrder}
                 disabled={!product.isAvailable || product.totalStock === 0}
-                className={`flex-1 flex items-center justify-center gap-2 py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  isInCart
-                    ? 'bg-[var(--primary)] text-[var(--primary-foreground)]'
-                    : 'bg-[var(--foreground)] text-[var(--background)] hover:opacity-90'
-                } disabled:opacity-50 disabled:cursor-not-allowed`}
+                className="flex-1 flex items-center justify-center gap-2 py-3 px-6 rounded-lg font-semibold transition-colors bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <ShoppingCart className="w-5 h-5" />
-                {isInCart ? 'In Cart' : 'Add to Cart'}
+                Order via WhatsApp
               </button>
               <button
                 onClick={handleWishlist}

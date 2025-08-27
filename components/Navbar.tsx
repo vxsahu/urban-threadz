@@ -98,10 +98,10 @@ const useCartCount = () => {
     };
 
     window.addEventListener('storage', handleCartUpdate);
-    window.addEventListener('cartUpdated', handleCartUpdate as EventListener);
+    window.addEventListener('cartUpdated', handleCustomCartUpdate as EventListener);
     return () => {
       window.removeEventListener('storage', handleCartUpdate);
-      window.removeEventListener('cartUpdated', handleCartUpdate as EventListener);
+      window.removeEventListener('cartUpdated', handleCustomCartUpdate as EventListener);
     };
   }, []);
 

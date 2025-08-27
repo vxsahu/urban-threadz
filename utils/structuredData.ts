@@ -1,25 +1,26 @@
 import { Product } from './productService';
 import { WithContext, Product as ProductSchema, Organization, WebSite, BreadcrumbList, ItemList } from 'schema-dts';
+import { config } from './config';
 
 // Organization structured data
 export function generateOrganizationSchema(): WithContext<Organization> {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'NextThread',
-    url: `${require('@/utils/config').siteUrl}`,
-    logo: `${require('@/utils/config').siteUrl}/logo.png`,
+    name: 'Urban Threadz',
+    url: config.siteUrl,
+    logo: `${config.siteUrl}/logo.png`,
     description: 'Premium clothing and fashion retailer offering trendy apparel for men, women, and unisex.',
     sameAs: [
-      `${require('@/utils/config').siteUrl}/redirect/instagram`,
-      `${require('@/utils/config').siteUrl}/redirect/twitter`,
-      `${require('@/utils/config').siteUrl}/redirect/facebook`
+      config.social.instagram,
+      config.social.twitter,
+      config.social.facebook
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+918502913816',
+      telephone: `+${config.whatsapp.phoneNumber}`,
       contactType: 'customer service',
-      email: 'urbanthreadz240@gmail.com'
+      email: config.store.email
     },
     address: {
       '@type': 'PostalAddress',
@@ -37,14 +38,14 @@ export function generateWebsiteSchema(): WithContext<WebSite> {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'NextThread',
-    url: `${require('@/utils/config').siteUrl}`,
+    name: 'Urban Threadz',
+    url: config.siteUrl,
     description: 'Premium clothing and fashion retailer',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${require('@/utils/config').siteUrl}/search?q={search_term_string}`
+        urlTemplate: `${config.siteUrl}/search?q={search_term_string}`
       },
       // 'query-input': 'required name=search_term_string'
     }
@@ -54,7 +55,7 @@ export function generateWebsiteSchema(): WithContext<WebSite> {
 // Product structured data
 export function generateProductSchema(product: Product): WithContext<ProductSchema> {
   const productImage = product.images.find(img => img.isMain)?.url || product.images[0]?.url;
-  const fullImageUrl = `${require('@/utils/config').siteUrl}${productImage}`;
+  const fullImageUrl = `${config.siteUrl}${productImage}`;
   
   const offers = {
     '@type': 'Offer',
@@ -63,10 +64,10 @@ export function generateProductSchema(product: Product): WithContext<ProductSche
     availability: product.isAvailable && product.totalStock > 0 
       ? 'https://schema.org/InStock' 
       : 'https://schema.org/OutOfStock',
-    url: `${require('@/utils/config').siteUrl}/productDetails/${product.id}`,
+    url: `${config.siteUrl}/productDetails/${product.id}`,
     seller: {
       '@type': 'Organization',
-      name: 'NextThread'
+      name: 'Urban Threadz'
     },
     priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 days from now
   };
@@ -86,7 +87,7 @@ export function generateProductSchema(product: Product): WithContext<ProductSche
     sku: product.id,
     brand: {
       '@type': 'Brand',
-      name: 'NextThread'
+      name: 'Urban Threadz'
     },
     category: product.category,
     // offers,
@@ -135,8 +136,8 @@ export function generateItemListSchema(products: Product[], category: string, su
       item: {
         '@type': 'Product',
         name: product.name,
-        url: `${require('@/utils/config').siteUrl}/productDetails/${product.id}`,
-        image: `${require('@/utils/config').siteUrl}${product.images.find(img => img.isMain)?.url || product.images[0]?.url}`,
+        url: `${config.siteUrl}/productDetails/${product.id}`,
+        image: `${config.siteUrl}${product.images.find(img => img.isMain)?.url || product.images[0]?.url}`,
         description: product.shortDescription || product.description,
         offers: {
           '@type': 'Offer',
@@ -159,10 +160,10 @@ export function generateFAQSchema(): WithContext<any> {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What is NextThread?',
+        name: 'What is Urban Threadz?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'NextThread is a premium clothing and fashion retailer offering trendy apparel for men, women, and unisex. We provide high-quality clothing with the latest fashion trends.'
+          text: 'Urban Threadz is a premium clothing and fashion retailer offering trendy apparel for men, women, and unisex. We provide high-quality clothing with the latest fashion trends.'
         }
       },
       {
@@ -206,11 +207,11 @@ export function generateLocalBusinessSchema(): WithContext<any> {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'NextThread',
+    name: 'Urban Threadz',
     description: 'Premium clothing and fashion retailer',
-    url: `${require('@/utils/config').siteUrl}`,
-    telephone: '+91 8502913816',
-    email: 'urbanthreadz240@gmail.com',
+    url: config.siteUrl,
+    telephone: `+${config.whatsapp.phoneNumber}`,
+    email: config.store.email,
     address: {
       '@type': 'PostalAddress',
       streetAddress: '123 Fashion Street',

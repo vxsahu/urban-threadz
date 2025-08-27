@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { baseMetadata } from "@/utils/seo";
 import StructuredData from "@/components/StructuredData";
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/utils/structuredData";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className="relative">
         <ThemeProvider>
           {children}
+          <WhatsAppButton />
         </ThemeProvider>
       </body>
     </html>

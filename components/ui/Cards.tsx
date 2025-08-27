@@ -1,11 +1,11 @@
 "use client"
 import Image from "next/image"
-import { Heart, ShoppingCart } from "lucide-react"
+import { Heart, ShoppingCart, MessageCircle } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { toast } from "sonner"
 import Link from "next/link"
-import { addToCart, isItemInCart } from "@/utils/cartService"
+import { addToCart, isItemInCart, generateWhatsAppMessage, openWhatsAppChat } from "@/utils/cartService"
 import { Product } from "@/utils/productService"
 
 export default function ProductCard({ product }: { product: Product }) {
@@ -40,10 +40,16 @@ export default function ProductCard({ product }: { product: Product }) {
     toast.success(isWishlisted ? "Removed from wishlist" : "Added to wishlist");
   }
 
-  const handleAddToCart = () => {
+  const handleAddToCartAndOrder = () => {
+    // Add to cart first
     addToCart(product, 1);
     setIsInCart(true);
     toast.success("Item added to cart!");
+    
+    // Then open WhatsApp for ordering
+    const message = generateWhatsAppMessage(product, 1);
+    openWhatsAppChat(message);
+    toast.success("Opening WhatsApp for quick order!");
   }
 
   const discountPercentage = product.discountedPrice < product.realPrice 
@@ -195,16 +201,13 @@ export default function ProductCard({ product }: { product: Product }) {
                   : ""
               }`}
             >
-              Buy
+              View Details
             </Link>
+            {/* Combined Add to Cart & WhatsApp Order Button */}
             <button
-              className={`flex items-center justify-center p-1.5 rounded-md border border-[var(--border)] transition-colors ${
-                isInCart
-                  ? "bg-[var(--primary)] text-[var(--primary-foreground)]"
-                  : "bg-transparent hover:bg-[var(--neutral)]"
-              }`}
-              aria-label="Add to cart"
-              onClick={handleAddToCart}
+              className="flex items-center justify-center p-1.5 rounded-md bg-green-600 text-white hover:bg-green-700 transition-colors"
+              aria-label="Add to cart and order via WhatsApp"
+              onClick={handleAddToCartAndOrder}
             >
               <ShoppingCart className="w-4 h-4" />
             </button>
