@@ -46,7 +46,7 @@ export default function Footer() {
         <div className="hidden sm:flex justify-center gap-6 text-xs text-[var(--secondary)] mt-2">
           <span>Makkasar, Hanumangarh Rajasthan 335513, India</span>
           <span>
-            <a href="mailto:Urbanthreadz240@gmail.com" className="hover:text-[var(--foreground)] transition">Urbanthreadz240@gmail.com</a>
+            <a href="mailto:Nextthreadz240@gmail.com" className="hover:text-[var(--foreground)] transition">Nextthreadz240@gmail.com</a>
           </span>
           <span>
             <a href="tel:+918502913816" className="hover:text-[var(--foreground)] transition">+91 8502913816</a>

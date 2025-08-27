@@ -74,7 +74,7 @@ const Preloader: React.FC<{ onComplete?: () => void }> = ({ onComplete }) => {
           MozOsxFontSmoothing: 'grayscale',
         }}
       >
-        Urban
+        Next
       </div>
       
       {/* Right (black) half */}

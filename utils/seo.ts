@@ -5,14 +5,14 @@ import { config } from './config';
 // Base metadata for the site
 export const baseMetadata: Metadata = {
   title: {
-    default: 'Urban Threadz - Premium Clothing & Fashion',
-    template: '%s | Urban Threadz'
+    default: 'Next Threadz - Premium Clothing & Fashion',
+    template: '%s | Next Threadz'
   },
-  description: 'Discover premium clothing and fashion items at Urban Threadz. Shop the latest trends in men\'s, women\'s, and unisex clothing with free shipping and easy returns.',
-  keywords: ['clothing', 'fashion', 'premium', 'urban', 'threadz', 'apparel', 'style', 'trendy'],
-  authors: [{ name: 'Urban Threadz' }],
-  creator: 'Urban Threadz',
-  publisher: 'Urban Threadz',
+  description: 'Discover premium clothing and fashion items at Next Threadz. Shop the latest trends in men\'s, women\'s, and unisex clothing with free shipping and easy returns.',
+  keywords: ['clothing', 'fashion', 'premium', 'next', 'threadz', 'apparel', 'style', 'trendy'],
+  authors: [{ name: 'Next Threadz' }],
+  creator: 'Next Threadz',
+  publisher: 'Next Threadz',
   formatDetection: {
     email: false,
     address: false,
@@ -26,24 +26,24 @@ export const baseMetadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: config.siteUrl,
-    siteName: 'Urban Threadz',
-    title: 'Urban Threadz - Premium Clothing & Fashion',
-    description: 'Discover premium clothing and fashion items at Urban Threadz. Shop the latest trends in men\'s, women\'s, and unisex clothing.',
+    siteName: 'Next Threadz',
+    title: 'Next Threadz - Premium Clothing & Fashion',
+    description: 'Discover premium clothing and fashion items at Next Threadz. Shop the latest trends in men\'s, women\'s, and unisex clothing.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Urban Threadz - Premium Clothing & Fashion',
+        alt: 'Next Threadz - Premium Clothing & Fashion',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Urban Threadz - Premium Clothing & Fashion',
-    description: 'Discover premium clothing and fashion items at Urban Threadz. Shop the latest trends in men\'s, women\'s, and unisex clothing.',
+    title: 'Next Threadz - Premium Clothing & Fashion',
+    description: 'Discover premium clothing and fashion items at Next Threadz. Shop the latest trends in men\'s, women\'s, and unisex clothing.',
     images: ['/og-image.png'],
-    creator: '@urbanthreadz',
+    creator: '@nextthreadz',
   },
   robots: {
     index: true,
@@ -72,7 +72,7 @@ export function generateProductMetadata(product: Product): Metadata {
   return {
     title: product.name,
     description: product.shortDescription || product.description,
-    keywords: [...(product.tags || []), 'clothing', 'fashion', 'premium', 'urban', 'threadz'],
+    keywords: [...(product.tags || []), 'clothing', 'fashion', 'premium', 'next', 'threadz'],
     openGraph: {
       type: 'website',
       url: productUrl,
@@ -86,7 +86,7 @@ export function generateProductMetadata(product: Product): Metadata {
           alt: product.name,
         },
       ],
-      siteName: 'Urban Threadz',
+      siteName: 'Next Threadz',
     },
     twitter: {
       card: 'summary_large_image',
@@ -125,7 +125,7 @@ export function generateCategoryMetadata(category: string, subcategory?: string)
   return {
     title,
     description,
-    keywords: [category, subcategory, 'clothing', 'fashion', 'premium', 'urban', 'threadz'].filter(Boolean) as string[],
+    keywords: [category, subcategory, 'clothing', 'fashion', 'premium', 'next', 'threadz'].filter(Boolean) as string[],
     openGraph: {
       type: 'website',
       url: `${config.siteUrl}/${category}${subcategory ? `?subcategory=${subcategory}` : ''}`,
@@ -157,24 +157,24 @@ export function generateProductsMetadata(): Metadata {
   return {
     title: 'All Products',
     description: 'Browse our complete collection of premium clothing and fashion items. Find your perfect style.',
-    keywords: ['all products', 'clothing', 'fashion', 'premium', 'urban', 'threadz', 'apparel'],
+    keywords: ['all products', 'clothing', 'fashion', 'premium', 'next', 'threadz', 'apparel'],
     openGraph: {
       type: 'website',
       url: `${config.siteUrl}/products`,
-      title: 'All Products - Urban Threadz',
+      title: 'All Products - Next Threadz',
       description: 'Browse our complete collection of premium clothing and fashion items.',
       images: [
         {
           url: '/og-image.png',
           width: 1200,
           height: 630,
-          alt: 'All Products - Urban Threadz',
+          alt: 'All Products - Next Threadz',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'All Products - Urban Threadz',
+      title: 'All Products - Next Threadz',
       description: 'Browse our complete collection of premium clothing and fashion items.',
       images: ['/og-image.png'],
     },
@@ -187,27 +187,27 @@ export function generateProductsMetadata(): Metadata {
 // Generate metadata for home page
 export function generateHomeMetadata(): Metadata {
   return {
-    title: 'Urban Threadz - Premium Clothing & Fashion',
-    description: 'Welcome to Urban Threadz. Discover premium clothing and fashion items with the latest trends in men\'s, women\'s, and unisex clothing. Free shipping and easy returns.',
-    keywords: ['home', 'clothing', 'fashion', 'premium', 'urban', 'threadz', 'apparel', 'style', 'trendy'],
+    title: 'Next Threadz - Premium Clothing & Fashion',
+    description: 'Welcome to Next Threadz. Discover premium clothing and fashion items with the latest trends in men\'s, women\'s, and unisex clothing. Free shipping and easy returns.',
+    keywords: ['home', 'clothing', 'fashion', 'premium', 'Next', 'threadz', 'apparel', 'style', 'trendy'],
     openGraph: {
       type: 'website',
       url: config.siteUrl,
-      title: 'Urban Threadz - Premium Clothing & Fashion',
-      description: 'Welcome to Urban Threadz. Discover premium clothing and fashion items with the latest trends.',
+      title: 'Next Threadz - Premium Clothing & Fashion',
+      description: 'Welcome to Next Threadz. Discover premium clothing and fashion items with the latest trends.',
       images: [
         {
           url: '/og-image.png',
           width: 1200,
           height: 630,
-          alt: 'Urban Threadz - Premium Clothing & Fashion',
+          alt: 'Next Threadz - Premium Clothing & Fashion',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Urban Threadz - Premium Clothing & Fashion',
-      description: 'Welcome to Urban Threadz. Discover premium clothing and fashion items with the latest trends.',
+      title: 'Next Threadz - Premium Clothing & Fashion',
+      description: 'Welcome to Next Threadz. Discover premium clothing and fashion items with the latest trends.',
       images: ['/og-image.png'],
     },
     alternates: {

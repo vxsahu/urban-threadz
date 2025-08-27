@@ -1,7 +1,7 @@
 // Configuration file for the application
 export const config = {
   // Site configuration
-  siteUrl: 'https://urban-threadz.vercel.app', // Replace with your actual domain
+  siteUrl: 'https://next-threadz.vercel.app', // Replace with your actual domain
   
   // WhatsApp configuration
   whatsapp: {
@@ -11,16 +11,16 @@ export const config = {
   
   // Store information
   store: {
-    name: 'Urban Threadz',
-    website: 'https://urban-threadz.com',
-    email: 'info@urban-threadz.com',
+    name: 'Next Threadz',
+    website: 'https://next-threadz.com',
+    email: 'info@next-threadz.com',
   },
   
   // Social media links
   social: {
-    instagram: 'https://www.instagram.com/urban__threadz__/',
-    facebook: 'https://facebook.com/urbanthreadz',
-    twitter: 'https://twitter.com/urbanthreadz',
+    instagram: 'https://www.instagram.com/next__threadz__/',
+    facebook: 'https://facebook.com/nextthreadz',
+    twitter: 'https://twitter.com/nextthreadz',
   },
   
   // Payment methods

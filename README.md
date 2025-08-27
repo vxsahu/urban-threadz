@@ -1,4 +1,4 @@
-# Urban Threadz - E-commerce Website
+# Next Threadz - E-commerce Website
 
 A modern, responsive e-commerce website built with Next.js, TypeScript, and Tailwind CSS. Features a WhatsApp integration for seamless customer communication and ordering.
 
@@ -69,9 +69,9 @@ Customize store details in the same config file:
 
 ```typescript
 store: {
-  name: 'Urban Threadz',
-  website: 'https://urban-threadz.com',
-  email: 'info@urban-threadz.com',
+  name: 'Next Threadz',
+  website: 'https://next-threadz.com',
+  email: 'info@next-threadz.com',
 },
 ```
 
@@ -81,7 +81,7 @@ store: {
 
 ```bash
 git clone <repository-url>
-cd urban-threadz
+cd next-threadz
 ```
 
 2. Install dependencies:
@@ -170,6 +170,6 @@ This project is licensed under the MIT License.
 
 For support or questions, please contact us via:
 
-- Email: <info@urban-threadz.com>
+- Email: <info@next-threadz.com>
 - WhatsApp: Use the floating button on the website
-- Instagram: [@urban__threadz__](https://www.instagram.com/urban__threadz__/)
+- Instagram: [@next__threadz__](https://www.instagram.com/next__threadz__/)

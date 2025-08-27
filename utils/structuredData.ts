@@ -7,7 +7,7 @@ export function generateOrganizationSchema(): WithContext<Organization> {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Urban Threadz',
+    name: 'Next Threadz',
     url: config.siteUrl,
     logo: `${config.siteUrl}/logo.png`,
     description: 'Premium clothing and fashion retailer offering trendy apparel for men, women, and unisex.',
@@ -38,7 +38,7 @@ export function generateWebsiteSchema(): WithContext<WebSite> {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Urban Threadz',
+    name: 'Next Threadz',
     url: config.siteUrl,
     description: 'Premium clothing and fashion retailer',
     potentialAction: {
@@ -67,7 +67,7 @@ export function generateProductSchema(product: Product): WithContext<ProductSche
     url: `${config.siteUrl}/productDetails/${product.id}`,
     seller: {
       '@type': 'Organization',
-      name: 'Urban Threadz'
+      name: 'Next Threadz'
     },
     priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 days from now
   };
@@ -87,7 +87,7 @@ export function generateProductSchema(product: Product): WithContext<ProductSche
     sku: product.id,
     brand: {
       '@type': 'Brand',
-      name: 'Urban Threadz'
+      name: 'Next Threadz'
     },
     category: product.category,
     // offers,
@@ -160,10 +160,10 @@ export function generateFAQSchema(): WithContext<any> {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What is Urban Threadz?',
+        name: 'What is Next Threadz?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Urban Threadz is a premium clothing and fashion retailer offering trendy apparel for men, women, and unisex. We provide high-quality clothing with the latest fashion trends.'
+          text: 'Next Threadz is a premium clothing and fashion retailer offering trendy apparel for men, women, and unisex. We provide high-quality clothing with the latest fashion trends.'
         }
       },
       {
@@ -207,7 +207,7 @@ export function generateLocalBusinessSchema(): WithContext<any> {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Urban Threadz',
+    name: 'Next Threadz',
     description: 'Premium clothing and fashion retailer',
     url: config.siteUrl,
     telephone: `+${config.whatsapp.phoneNumber}`,

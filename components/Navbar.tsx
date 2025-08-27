@@ -450,7 +450,7 @@ export default function Navbar({ className = "" }: NavbarProps) {
 
             <ActionButton
               icon={Instagram}
-              href="https://www.instagram.com/urban__threadz__/"
+              href="https://www.instagram.com/next__threadz__/"
               label="Instagram"
             />
             

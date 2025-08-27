@@ -19,7 +19,7 @@ const StepIcon = memo(function StepIcon({ idx }: { idx: number }) {
 const steps = [
   {
     title: "Choose Your Style",
-    desc: "Browse and pick your favorite designs on our instagram page @urban__threadz__",
+    desc: "Browse and pick your favorite designs on our instagram page @next__threadz__",
     action: "Visit Instagram",
     actionHref: `${require('@/utils/config').siteUrl}/redirect/instagram`,
     actionTarget: "_blank",
