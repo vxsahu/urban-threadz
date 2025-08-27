@@ -71,34 +71,6 @@ export default function WhatsAppButton() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      <div className="flex flex-col items-end space-y-3">
-        {/* Main WhatsApp Button */}
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={handleWhatsAppClick}
-          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-colors duration-200"
-          aria-label="Chat on WhatsApp"
-        >
-          <MessageCircle className="w-6 h-6" />
-        </motion.button>
-
-        {/* Expand Button */}
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setIsExpanded(!isExpanded)}
-          className={`p-3 rounded-full shadow-lg transition-all duration-200 ${
-            isExpanded 
-              ? 'bg-red-500 hover:bg-red-600 text-white' 
-              : 'bg-gray-100 hover:bg-gray-200 text-gray-600'
-          }`}
-          aria-label={isExpanded ? "Close menu" : "Open menu"}
-        >
-          <X className={`w-5 h-5 transition-transform duration-200 ${isExpanded ? 'rotate-45' : 'rotate-0'}`} />
-        </motion.button>
-      </div>
     </div>
   );
 }

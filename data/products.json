@@ -1,18 +1,18 @@
 [
   {
     "id": "1",
-    "name": "Classic Cotton T-Shirt",
+    "name": "Samurai Cotton T-Shirt",
     "images": [
       {
-        "url": "/t-1.webp",
-        "alt": "Classic Cotton T-Shirt",
+        "url": "/samurai.webp",
+        "alt": "Samurai Cotton T-Shirt",
         "isMain": true
       }
     ],
     "realPrice": 29.99,
     "discountedPrice": 24.99,
-    "description": "A comfortable and stylish cotton t-shirt perfect for everyday wear. Made from 100% organic cotton with a relaxed fit.",
-    "shortDescription": "Comfortable cotton t-shirt for everyday wear",
+    "description": "A comfortable and stylish samurai cotton t-shirt perfect for everyday wear. Made from 100% organic cotton with a relaxed fit.",
+    "shortDescription": "Comfortable samurai cotton t-shirt for everyday wear",
     "sizes": [
       {
         "name": "S",
@@ -33,7 +33,7 @@
     ],
     "category": "T-Shirts",
     "gender": "unisex",
-    "tags": ["cotton", "casual", "comfortable", "basic"],
+    "tags": ["cotton", "casual", "comfortable", "basic", "samurai"],
     "isAvailable": true,
     "totalStock": 45,
     "avgRating": 4.5,
@@ -43,18 +43,18 @@
   },
   {
     "id": "2",
-    "name": "Premium Denim Jeans",
+    "name": "Premium Urban Threadz T-Shirt",
     "images": [
       {
-        "url": "/t-2.webp",
-        "alt": "Premium Denim Jeans",
+        "url": "/urban-threadz.png",
+        "alt": "Premium Urban Threadz T-Shirt",
         "isMain": true
       }
     ],
-    "realPrice": 89.99,
-    "discountedPrice": 69.99,
-    "description": "High-quality denim jeans with perfect fit and durability. Features a modern slim cut with stretch comfort.",
-    "shortDescription": "Premium denim jeans with perfect fit",
+    "realPrice": 399,
+    "discountedPrice": 299,
+    "description": "High-quality urban threadz t-shirt with perfect fit and durability. Features a modern slim cut with stretch comfort.",
+    "shortDescription": "Premium urban threadz t-shirt with perfect fit",
     "sizes": [
       {
         "name": "S",
@@ -77,9 +77,9 @@
         "stock": 4
       }
     ],
-    "category": "Jeans",
+    "category": "T-Shirts",
     "gender": "unisex",
-    "tags": ["denim", "premium", "slim-fit", "casual"],
+    "tags": ["cotton", "casual", "comfortable", "basic", "urban threadz"],
     "isAvailable": true,
     "totalStock": 33,
     "avgRating": 4.8,
@@ -89,18 +89,18 @@
   },
   {
     "id": "3",
-    "name": "Casual Hoodie",
+    "name": "Casual Urban Threadz T-Shirt",
     "images": [
       {
-        "url": "/t-3.webp",
-        "alt": "Casual Hoodie",
+        "url": "/urban-threadz-2.webp",
+        "alt": "Casual Urban Threadz T-Shirt",
         "isMain": true
       }
     ],
-    "realPrice": 59.99,
-    "discountedPrice": 49.99,
-    "description": "Warm and cozy hoodie perfect for cool weather. Features a soft fleece lining and adjustable drawstring hood.",
-    "shortDescription": "Warm and cozy hoodie for cool weather",
+    "realPrice": 399,
+    "discountedPrice": 299,
+    "description": "Warm and cozy urban threadz t-shirt perfect for cool weather. Features a soft fleece lining and adjustable drawstring hood.",
+    "shortDescription": "Warm and cozy urban threadz t-shirt for cool weather",
     "sizes": [
       {
         "name": "S",
@@ -119,9 +119,9 @@
         "stock": 6
       }
     ],
-    "category": "Hoodies",
+    "category": "T-Shirts",
     "gender": "unisex",
-    "tags": ["hoodie", "warm", "casual", "comfortable"],
+    "tags": ["cotton", "casual", "comfortable", "basic", "urban threadz"],
     "isAvailable": true,
     "totalStock": 34,
     "avgRating": 4.3,
@@ -131,18 +131,18 @@
   },
   {
     "id": "4",
-    "name": "Formal Dress Shirt",
+    "name": "Hang Out T-Shirt",
     "images": [
       {
-        "url": "/t-4.webp",
-        "alt": "Formal Dress Shirt",
+        "url": "/hang-out.webp",
+        "alt": "Hang Out T-Shirt",
         "isMain": true
       }
     ],
-    "realPrice": 79.99,
-    "discountedPrice": 64.99,
-    "description": "Elegant formal dress shirt suitable for business meetings and special occasions. Made from wrinkle-resistant fabric.",
-    "shortDescription": "Elegant formal dress shirt for business",
+    "realPrice": 299,
+    "discountedPrice": 199,
+    "description": "Elegant hang out t-shirt suitable for business meetings and special occasions. Made from wrinkle-resistant fabric.",
+    "shortDescription": "Elegant hang out t-shirt for business",
     "sizes": [
       {
         "name": "S",
@@ -177,18 +177,18 @@
   },
   {
     "id": "5",
-    "name": "Graphic Print T-Shirt",
+    "name": "Silent T-Shirt",
     "images": [
       {
-        "url": "/t-5.webp",
-        "alt": "Graphic Print T-Shirt",
+        "url": "/silent.webp",
+        "alt": "Silent T-Shirt",
         "isMain": true
       }
     ],
-    "realPrice": 34.99,
-    "discountedPrice": 27.99,
-    "description": "Stylish graphic t-shirt with unique artwork. Perfect for expressing your personality.",
-    "shortDescription": "Stylish graphic t-shirt with unique artwork",
+    "realPrice": 399,
+    "discountedPrice": 299,
+    "description": "Stylish silent t-shirt with unique artwork. Perfect for expressing your personality.",
+    "shortDescription": "Stylish silent t-shirt with unique artwork",
     "sizes": [
       {
         "name": "S",
@@ -207,9 +207,9 @@
         "stock": 6
       }
     ],
-    "category": "Graphic Tees",
+    "category": "T-Shirts",
     "gender": "unisex",
-    "tags": ["graphic", "artistic", "casual", "trending"],
+    "tags": ["cotton", "casual", "comfortable", "basic", "silent"],
     "isAvailable": true,
     "totalStock": 36,
     "avgRating": 4.7,
@@ -220,18 +220,18 @@
   },
   {
     "id": "6",
-    "name": "Minimalist White Tee",
+    "name": "Gaurdien From Hell T-Shirt",
     "images": [
       {
-        "url": "/t-6.webp",
-        "alt": "Minimalist White Tee",
+        "url": "/gaurdien-from-hell.webp",
+        "alt": "Gaurdien From Hell T-Shirt",
         "isMain": true
       }
     ],
-    "realPrice": 24.99,
-    "discountedPrice": 19.99,
-    "description": "Clean and simple white t-shirt with minimalist design. Perfect for everyday wear.",
-    "shortDescription": "Clean and simple white t-shirt",
+    "realPrice": 399,
+    "discountedPrice": 299,
+    "description": "Clean and simple gaurdien from hell t-shirt with minimalist design. Perfect for everyday wear.",
+    "shortDescription": "Clean and simple gaurdien from hell t-shirt",
     "sizes": [
       {
         "name": "S",
@@ -250,9 +250,9 @@
         "stock": 12
       }
     ],
-    "category": "Minimalist",
+    "category": "T-Shirts",
     "gender": "unisex",
-    "tags": ["minimalist", "simple", "clean", "basic"],
+    "tags": ["cotton", "casual", "comfortable", "basic", "gaurdien from hell"],
     "isAvailable": true,
     "totalStock": 65,
     "avgRating": 4.4,
@@ -262,18 +262,18 @@
   },
   {
     "id": "7",
-    "name": "Vintage Denim Jacket",
+    "name": "Maratha Special T-Shirt",
     "images": [
       {
-        "url": "/t-7.jpg",
-        "alt": "Vintage Denim Jacket",
+        "url": "/maratha.jpg",
+        "alt": "Maratha Special T-Shirt",
         "isMain": true
       }
     ],
-    "realPrice": 129.99,
-    "discountedPrice": 89.99,
-    "description": "Classic vintage-style denim jacket with distressed finish. Timeless fashion piece.",
-    "shortDescription": "Classic vintage-style denim jacket",
+    "realPrice": 399,
+    "discountedPrice": 299,
+    "description": "Classic maratha special t-shirt with distressed finish. Timeless fashion piece.",
+    "shortDescription": "Classic maratha special t-shirt",
     "sizes": [
       {
         "name": "S",
@@ -292,9 +292,9 @@
         "stock": 5
       }
     ],
-    "category": "Vintage",
+    "category": "T-Shirts",
     "gender": "unisex",
-    "tags": ["vintage", "denim", "classic", "distressed"],
+    "tags": ["cotton", "casual", "comfortable", "basic", "maratha special"],
     "isAvailable": true,
     "totalStock": 26,
     "avgRating": 4.9,
@@ -304,18 +304,18 @@
   },
   {
     "id": "8",
-    "name": "Limited Edition Artist Tee",
+    "name": "Fast Is Fun T-Shirt",
     "images": [
       {
-        "url": "/t-8.webp",
-        "alt": "Limited Edition Artist Tee",
+        "url": "/fast-is-fun.webp",
+        "alt": "Fast Is Fun T-Shirt",
         "isMain": true
       }
     ],
-    "realPrice": 49.99,
-    "discountedPrice": 39.99,
-    "description": "Exclusive limited edition t-shirt featuring original artwork. Only 100 pieces available worldwide.",
-    "shortDescription": "Exclusive limited edition artist t-shirt",
+    "realPrice": 299,
+    "discountedPrice": 199,
+    "description": "Exclusive fast is fun t-shirt featuring original artwork. Only 100 pieces available worldwide.",
+    "shortDescription": "Exclusive fast is fun t-shirt",
     "sizes": [
       {
         "name": "S",
@@ -334,9 +334,9 @@
         "stock": 3
       }
     ],
-    "category": "Limited Edition",
+    "category": "T-Shirts",
     "gender": "unisex",
-    "tags": ["limited", "exclusive", "artist", "collector"],
+    "tags": ["cotton", "casual", "comfortable", "basic", "fast is fun"],
     "isAvailable": true,
     "totalStock": 15,
     "avgRating": 4.8,
@@ -347,18 +347,18 @@
   },
   {
     "id": "9",
-    "name": "Men's Premium Polo",
+    "name": "Men's Premium Bunny",
     "images": [
       {
-        "url": "/t-9.webp",
-        "alt": "Men's Premium Polo",
+        "url": "/bunny.webp",
+        "alt": "Men's Premium Bunny",
         "isMain": true
       }
     ],
-    "realPrice": 69.99,
-    "discountedPrice": 54.99,
-    "description": "Premium polo shirt for men with superior comfort and style. Perfect for casual and semi-formal occasions.",
-    "shortDescription": "Premium polo shirt for men",
+    "realPrice": 399,
+    "discountedPrice": 299,
+    "description": "Premium bunny for men with superior comfort and style. Perfect for casual and semi-formal occasions.",
+    "shortDescription": "Premium bunny for men",
     "sizes": [
       {
         "name": "S",
@@ -389,18 +389,18 @@
   },
   {
     "id": "10",
-    "name": "Women's Elegant Blouse",
+    "name": "Dark Shadow T-Shirt",
     "images": [
       {
-        "url": "/t-10.webp",
-        "alt": "Women's Elegant Blouse",
+        "url": "/dark-shadow.webp",
+        "alt": "Dark Shadow T-Shirt",
         "isMain": true
       }
     ],
-    "realPrice": 89.99,
-    "discountedPrice": 59.99,
-    "description": "Elegant blouse for women with sophisticated design. Perfect for office and evening wear.",
-    "shortDescription": "Elegant blouse for women",
+    "realPrice": 199,
+    "discountedPrice": 149,
+    "description": "Dark shadow t-shirt with sophisticated design. Perfect for office and evening wear.",
+    "shortDescription": "Dark shadow t-shirt",
     "sizes": [
       {
         "name": "S",
@@ -419,9 +419,9 @@
         "stock": 5
       }
     ],
-    "category": "Women's Wear",
-    "gender": "women",
-    "tags": ["women", "elegant", "blouse", "formal"],
+    "category": "Men's Wear",
+    "gender": "men",
+    "tags": ["men", "dark", "shadow", "t-shirt", "formal"],
     "isAvailable": true,
     "totalStock": 29,
     "avgRating": 4.7,
@@ -434,7 +434,7 @@
     "name": "Bundle Deal: 3-Pack Tees",
     "images": [
       {
-        "url": "/t-10.webp",
+        "url": "/dark-shadow.webp",
         "alt": "Bundle Deal: 3-Pack Tees",
         "isMain": true
       }

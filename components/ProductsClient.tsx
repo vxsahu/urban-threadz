@@ -14,15 +14,17 @@ export default function ProductsClient({ products }: ProductsClientProps) {
     <>
       <Navbar />
       <div className="min-h-screen bg-gray-50 pt-16">
-        <div className="container mx-auto px-4 py-8">
+        <div className="container max-w-5xl mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
-            <Link 
-              href="/" 
-              className="inline-flex items-center text-[var(--primary)] hover:underline mb-4"
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-200 mb-4 group"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
+              <span className="relative flex items-center">
+                <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform duration-200" />
+                <span className="sr-only">Back</span>
+              </span>
             </Link>
             <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
               All Products

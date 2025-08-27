@@ -8,7 +8,7 @@ export default function Testimonials() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/t-1.webp')",
+          backgroundImage: "url('/samurai.webp')",
           filter: "blur(20px) brightness(0.2)",
           transform: "scale(1.1)"
         }}

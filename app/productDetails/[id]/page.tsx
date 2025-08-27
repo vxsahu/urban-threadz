@@ -28,7 +28,7 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
   if (!product) {
     return (
       <div className="min-h-screen bg-[var(--background)]">
-        <div className="container mx-auto px-4 py-8 mt-16">
+        <div className="container max-w-7xl mx-auto px-4 py-8 mt-16">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-[var(--foreground)] mb-4">Product not found</h1>
             <p className="text-[var(--secondary)]">The product you're looking for doesn't exist.</p>

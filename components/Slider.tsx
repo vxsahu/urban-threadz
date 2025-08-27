@@ -14,25 +14,25 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    image: '/t-8.webp',
+    image: '/gator.webp',
     title: 'New Collection',
     description: 'Discover our latest arrivals'
   },
   {
     id: 2,
-    image: '/t-7.webp',
+    image: '/hang-out.webp',
     title: 'Summer Sale',
     description: 'Up to 50% off on selected items'
   },
   {
     id: 3,
-    image: '/t-10.webp',
+    image: '/dark-shadow.webp',
     title: 'Limited Edition',
     description: 'Exclusive designs for a limited time'
   },
   {
     id: 4,
-    image: '/t-5.webp',
+    image: '/maratha.jpg',
     title: 'Limited Edition',
     description: 'Exclusive designs for a limited time'
   },
