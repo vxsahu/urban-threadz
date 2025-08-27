@@ -9,8 +9,8 @@
         "isMain": true
       }
     ],
-    "realPrice": 29.99,
-    "discountedPrice": 24.99,
+    "realPrice": 299,
+    "discountedPrice": 249,
     "description": "A comfortable and stylish samurai cotton t-shirt perfect for everyday wear. Made from 100% organic cotton with a relaxed fit.",
     "shortDescription": "Comfortable samurai cotton t-shirt for everyday wear",
     "sizes": [
@@ -439,8 +439,8 @@
         "isMain": true
       }
     ],
-    "realPrice": 89.97,
-    "discountedPrice": 59.99,
+    "realPrice": 299,
+    "discountedPrice": 199,
     "description": "Amazing bundle deal! Get 3 premium t-shirts for the price of 2. Mix and match colors.",
     "shortDescription": "Bundle deal: 3 premium t-shirts",
     "sizes": [
