@@ -21,7 +21,7 @@ const steps = [
     title: "Choose Your Style",
     desc: "Browse and pick your favorite designs on our instagram page @next__threadz__",
     action: "Visit Instagram",
-    actionHref: `${require('@/utils/config').siteUrl}/redirect/instagram`,
+    actionHref: "https://www.instagram.com/next__threadz__/",
     actionTarget: "_blank",
     actionRel: "noopener noreferrer",
   },
